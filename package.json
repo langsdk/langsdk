@@ -1,0 +1,65 @@
+{
+  "name": "langsdk",
+  "version": "0.0.0",
+  "description": "LangSDK is a toolkit for working with language models.",
+  "keywords": [],
+  "homepage": "https://github.com/langsdk/langsdk#readme",
+  "bugs": "https://github.com/langsdk/langsdk/issues",
+  "repository": "langsdk/langsdk",
+  "funding": "https://github.com/sponsors/langsdk",
+  "license": "MIT",
+  "author": {
+    "name": "Neeraj Dalal",
+    "email": "admin@nrjdalal.com",
+    "url": "https://langsdk.com"
+  },
+  "type": "module",
+  "bin": "./dist/bin/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "bin": "tsdown && node dist/bin/index.mjs",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "prepare": "npx simple-git-hooks"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "npx commitlint --edit $1"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown",
+    "package.json": "sort-package-json"
+  },
+  "prettier": {
+    "plugins": [
+      "@ianvs/prettier-plugin-sort-imports"
+    ],
+    "semi": false
+  },
+  "dependencies": {
+    "ai": "^5.0.93",
+    "nano-spawn": "^2.0.0",
+    "ollama-ai-provider-v2": "^1.5.4",
+    "simple-git": "^3.30.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.2",
+    "@types/node": "^22.15.32",
+    "lint-staged": "^15.5.2",
+    "prettier": "^3.5.3",
+    "simple-git-hooks": "^2.13.0",
+    "sort-package-json": "^3.2.1",
+    "tsdown": "^0.16.4",
+    "typescript": "^5.8.3"
+  }
+}
