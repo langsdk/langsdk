@@ -44,22 +44,22 @@
     "semi": false
   },
   "dependencies": {
-    "ai": "^5.0.93",
+    "ai": "^5.0.104",
     "nano-spawn": "^2.0.0",
-    "ollama-ai-provider-v2": "^1.5.4",
+    "ollama-ai-provider-v2": "^1.5.5",
     "simple-git": "^3.30.0",
-    "zod": "^3.24.1"
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@ianvs/prettier-plugin-sort-imports": "^4.4.2",
-    "@types/node": "^22.15.32",
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
+    "@types/node": "^22.19.1",
     "lint-staged": "^15.5.2",
-    "prettier": "^3.5.3",
-    "simple-git-hooks": "^2.13.0",
-    "sort-package-json": "^3.2.1",
-    "tsdown": "^0.16.4",
-    "typescript": "^5.8.3"
+    "prettier": "^3.7.3",
+    "simple-git-hooks": "^2.13.1",
+    "sort-package-json": "^3.5.0",
+    "tsdown": "^0.16.8",
+    "typescript": "^5.9.3"
   }
 }
